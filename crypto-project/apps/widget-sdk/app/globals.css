@@ -1,0 +1,36 @@
+/* Dosya: apps/widget-sdk/app/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 BUKALEMUN AYARLARI BURADA */
+:root {
+  /* 1. Renkler */
+  /* Eskisi: --color-primary: 0 0 0; */
+  
+  /* YENİSİ (Kapital Kırmızısı): */
+  --color-primary: 220 38 38; 
+
+  /* ...diğerleri aynı kalsın... */
+  --color-secondary: 100 116 139;
+  --color-bg: 255 255 255;
+  --color-text: 15 23 42;
+  /* ... */
+}
+
+/* Koyu Mod (Dark Mode) Desteği */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: 15 23 42;
+    /* Koyu Arka Plan */
+    --color-text: 248 250 252;
+    /* Açık Yazı */
+  }
+}
+
+body {
+  /* Arka planı ve yazı rengini değişkenlerden al */
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+}

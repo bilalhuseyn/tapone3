@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "Transaction" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "amountAZN" DECIMAL NOT NULL,
+    "amountUSDT" DECIMAL NOT NULL,
+    "rate" DECIMAL NOT NULL,
+    "status" TEXT NOT NULL DEFAULT 'SUCCESS',
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
